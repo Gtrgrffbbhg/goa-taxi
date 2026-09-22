@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+:root {
+  /* Core */
+  --background: #f8faf8;
+  --foreground: #10251e;
+
+  /* Brand */
+  --primary: #08745f;
+  --primary-dark: #045340;
+
+  /* Accent */
+  --accent: #e9a928;
+  --accent-dark: #b87808;
+
+  /* Supporting */
+  --vibrant: #0f9f8d;
+  --muted: #53645d;
+  --border: #d8e2dd;
+
+  /* Surfaces */
+  --white: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f2;
+  --surface-green: #e3f1ec;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 14px rgba(16, 37, 30, 0.06);
+  --shadow-md: 0 12px 30px rgba(16, 37, 30, 0.09);
+  --shadow-lg: 0 20px 50px rgba(16, 37, 30, 0.13);
+}
+/* --------------------------------------------------
+   Base
+-------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(20, 184, 166, 0.035),
+      transparent 28%
+    ),
+    var(--background);
+  color: var(--foreground);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------------------
+   Typography
+-------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+}
+
+/* --------------------------------------------------
+   Links & Buttons
+-------------------------------------------------- */
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* --------------------------------------------------
+   Images
+-------------------------------------------------- */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------
+   Selection
+-------------------------------------------------- */
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------
+   Scrollbar
+-------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aabbb3;
+  border-radius: 999px;
+  border: 2px solid #edf2ee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* --------------------------------------------------
+   Section behaviour
+-------------------------------------------------- */
+
+section {
+  scroll-margin-top: 88px;
+}
+
+/* --------------------------------------------------
+   Premium utility classes
+-------------------------------------------------- */
+
+.premium-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 127, 104, 0.22);
+  box-shadow: var(--shadow-lg);
+}
+
+.premium-glass {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.premium-gradient {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(20, 184, 166, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(244, 185, 66, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      var(--primary-dark),
+      var(--primary)
+    );
+}
+
+/* --------------------------------------------------
+   Focus accessibility
+-------------------------------------------------- */
+
+:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.4);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------
+   Smooth interactions
+-------------------------------------------------- */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --------------------------------------------------
+   Mobile refinements
+-------------------------------------------------- */
+
+@media (max-width: 640px) {
+  section {
+    scroll-margin-top: 76px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* --------------------------------------------------
+   Reduced motion accessibility
+-------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

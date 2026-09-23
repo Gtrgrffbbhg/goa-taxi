@@ -20,9 +20,9 @@ const faqs = [
       "Yes. We provide airport transfers from Dabolim Airport to destinations across Goa. Share your pickup details and destination to arrange your ride.",
   },
   {
-    question: "Can I book a taxi for Goa sightseeing?",
+    question: "Can I book a taxi for Goa Tours?",
     answer:
-      "Yes. You can book a taxi for North Goa, South Goa, Dudhsagar trips and customised sightseeing plans based on your travel requirements.",
+      "Yes. You can book a taxi for North Goa, South Goa, Dudhsagar trips and customised Goa Tours plans based on your travel requirements.",
   },
   {
     question: "How can I book a taxi?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Can I book a taxi for the entire day?",
     answer:
-      "Yes. Full-day taxi bookings can be arranged for sightseeing and customised Goa trips. Share your itinerary and we can discuss the suitable vehicle and plan.",
+      "Yes. Full-day taxi bookings can be arranged for Goa Tours and customised Goa trips. Share your itinerary and we can discuss the suitable vehicle and plan.",
   },
   {
     question: "Do you provide hotel and railway station transfers?",
@@ -45,7 +45,7 @@ const faqs = [
       "Yes. Pickup and drop services can be arranged between hotels, resorts, railway stations, airports and other destinations across Goa.",
   },
   {
-    question: "Can I create a custom Goa sightseeing plan?",
+    question: "Can I create a custom Goa Tours plan?",
     answer:
       "Absolutely. Tell us the places you want to visit, your preferred timing and the number of travellers, and we can help you plan a suitable taxi trip.",
   },
@@ -82,7 +82,7 @@ export default function FAQ() {
           </h2>
 
           <p className="mt-4 leading-7 text-[var(--muted)]">
-            Quick answers about airport transfers, sightseeing, vehicles and
+            Quick answers about airport transfers, Goa Tours, vehicles and
             booking your taxi in Goa.
           </p>
         </div>

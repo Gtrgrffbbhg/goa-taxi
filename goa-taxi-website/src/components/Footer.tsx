@@ -84,7 +84,7 @@ export default function Footer() {
 
             <div className="mt-5 flex flex-col gap-3 text-sm text-white/60">
               <span>Airport Transfers</span>
-              <span>Goa Sightseeing</span>
+              <span>Goa Tours</span>
               <span>Hotel Transfers</span>
               <span>Local Taxi</span>
               <span>Railway Transfers</span>
@@ -156,7 +156,7 @@ export default function Footer() {
             </p>
 
             <p>
-              Goa Taxi Service • Airport Transfers • Sightseeing
+              Goa Taxi Service • Airport Transfers • Goa Tours
             </p>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function FinalCTA() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/70">
-                Airport pickup, sightseeing, hotel transfers or a local ride —
+                Airport pickup, Goa Tours, hotel transfers or a local ride —
                 tell us what you need and we will help arrange your journey.
               </p>
 

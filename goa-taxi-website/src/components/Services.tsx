@@ -47,7 +47,7 @@ export default function Services() {
             </h2>
 
             <p className="mt-4 leading-7 text-[var(--muted)]">
-              From airport pickups to sightseeing and local travel, choose
+              From airport pickups to Goa Tours and local travel, choose
               the service that fits your journey.
             </p>
           </div>

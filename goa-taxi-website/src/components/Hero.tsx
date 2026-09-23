@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { siteData } from "@/data/siteData";
 
-type TripType = "Airport Transfer" | "One Way" | "Sightseeing";
+type TripType = "Airport Transfer" | "One Way" | "Goa Tours";
 
 export default function Hero() {
   const [tripType, setTripType] =
@@ -95,7 +95,7 @@ Vehicle: ${vehicle}
 
             {/* Description */}
             <p className="mt-6 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-              Comfortable taxi service for airport transfers, sightseeing,
+              Comfortable taxi service for airport transfers, Goa Tours,
               hotel pickups and everyday travel across Goa — backed by local
               experience and easy booking.
             </p>
@@ -187,7 +187,7 @@ Vehicle: ${vehicle}
               {[
                 "Mopa Airport",
                 "Dabolim Airport",
-                "Goa Sightseeing",
+                "Goa Tours",
                 "Hotel Transfers",
               ].map((item) => (
                 <span
@@ -241,7 +241,7 @@ Vehicle: ${vehicle}
                   [
                     "Airport Transfer",
                     "One Way",
-                    "Sightseeing",
+                    "Goa Tours",
                   ] as TripType[]
                 ).map((type) => (
                   <button
@@ -302,7 +302,7 @@ Vehicle: ${vehicle}
                         setDestination(e.target.value)
                       }
                       placeholder={
-                        tripType === "Sightseeing"
+                        tripType === "Goa Tours"
                           ? "North Goa, South Goa, Dudhsagar..."
                           : "Where do you want to go?"
                       }

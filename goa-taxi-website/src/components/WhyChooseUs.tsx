@@ -18,7 +18,7 @@ const reasons = [
     icon: Clock3,
     title: "Flexible Travel",
     description:
-      "From airport pickups to full-day sightseeing, plan your journey around your schedule.",
+      "From airport pickups to full-day Goa Tours, plan your journey around your schedule.",
   },
   {
     icon: ShieldCheck,
@@ -42,7 +42,7 @@ const reasons = [
     icon: Sparkles,
     title: "Made for Goa Trips",
     description:
-      "Airport transfers, local rides and sightseeing — everything you need for travelling around Goa.",
+      "Airport transfers, local rides and Goa Tours — everything you need for travelling around Goa.",
   },
 ];
 

@@ -7,11 +7,9 @@ import {
 import { siteData } from "@/data/siteData";
 
 const fleetImages = [
-"https://imgs.search.brave.com/biXnrrEKdK0MzOoGj1HFP7jvyEOR5zoZx58fO-iK2oM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkzMzI0/MjcuanBn",
-
-"https://wallpapercave.com/wp/wp9777827.jpg",
-
-"https://imgs.search.brave.com/Ma4yhWiNOFLDTzItfk8Kvl4ls4I-kB3H7feNGHC9nR4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDk5MjQx/MzkuanBn"
+  "/etiosfinal.png",
+  "/final.png",
+  "/innova.png",
 ];
 
 export default function Fleet() {
@@ -21,21 +19,26 @@ export default function Fleet() {
       className="bg-[var(--background)] px-5 py-20 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
-
         {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
-            Our Fleet
-          </p>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent-dark)]">
+              Our Fleet
+            </p>
 
-          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-            Comfortable Vehicles for Every Journey
-          </h2>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+              The Right Ride for Your Goa Trip
+            </h2>
 
-          <p className="mt-4 leading-7 text-[var(--muted)]">
-            Choose a vehicle that matches your group size, comfort needs and
-            travel plans across Goa.
-          </p>
+            <p className="mt-4 max-w-xl leading-7 text-[var(--muted)]">
+              From comfortable sedans to spacious family vehicles, choose
+              the ride that fits your journey.
+            </p>
+          </div>
+
+          <div className="hidden rounded-full border border-[var(--border)] bg-white px-4 py-2 text-xs font-bold text-[var(--primary)] shadow-sm sm:block">
+            AC • Comfortable • Private
+          </div>
         </div>
 
         {/* Fleet */}
@@ -43,27 +46,31 @@ export default function Fleet() {
           {siteData.fleet.map((vehicle, index) => (
             <article
               key={vehicle.name}
-              className="group overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white shadow-[0_8px_25px_rgba(16,37,30,0.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[var(--primary)]/20 hover:shadow-[0_22px_50px_rgba(16,37,30,0.13)]"
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden bg-slate-200">
                 <img
                   src={fleetImages[index]}
                   alt={`${vehicle.name} taxi vehicle`}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
-                {/* Vehicle Type */}
-                <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1.5 text-xs font-bold text-[var(--primary)] backdrop-blur">
+                {/* Number */}
+                <span className="absolute right-5 top-4 text-5xl font-black leading-none text-white/20">
+                  0{index + 1}
+                </span>
+
+                {/* Vehicle name */}
+                <div className="absolute left-5 top-5 rounded-full border border-white/30 bg-white/90 px-3.5 py-1.5 text-xs font-bold text-[var(--primary)] shadow-sm backdrop-blur">
                   {vehicle.name}
                 </div>
 
                 {/* Seats */}
-                <div className="absolute bottom-5 left-5 flex items-center gap-2 text-sm font-semibold text-white">
-                  <Users size={17} />
+                <div className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-black/35 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
+                  <Users size={15} />
                   {vehicle.seats} passengers
                 </div>
               </div>
@@ -72,16 +79,16 @@ export default function Fleet() {
               <div className="p-6 sm:p-7">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[var(--accent)]">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--accent-dark)]">
                       {vehicle.name}
                     </p>
 
-                    <h3 className="mt-2 text-2xl font-bold">
+                    <h3 className="mt-2 text-2xl font-black tracking-tight">
                       {vehicle.type || "Comfort Vehicle"}
                     </h3>
                   </div>
 
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--primary)]/10 text-[var(--primary)]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[var(--surface-green)] text-[var(--primary)] transition duration-300 group-hover:bg-[var(--primary)] group-hover:text-white">
                     <Snowflake size={19} />
                   </div>
                 </div>
@@ -91,43 +98,41 @@ export default function Fleet() {
                 </p>
 
                 {/* Features */}
-                <div className="mt-5 space-y-2.5">
-                  <div className="flex items-center gap-2 text-sm font-medium">
-                    <CheckCircle2
-                      size={16}
-                      className="text-[var(--primary)]"
-                    />
-                    Air-conditioned
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm font-medium">
-                    <CheckCircle2
-                      size={16}
-                      className="text-[var(--primary)]"
-                    />
-                    Comfortable for travel
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm font-medium">
-                    <CheckCircle2
-                      size={16}
-                      className="text-[var(--primary)]"
-                    />
-                    Suitable for Goa trips
-                  </div>
+                <div className="mt-5 grid gap-2">
+                  {[
+                    "Air-conditioned",
+                    "Comfortable for travel",
+                    "Suitable for Goa trips",
+                  ].map((feature) => (
+                    <div
+                      key={feature}
+                      className="flex items-center gap-2 text-sm font-semibold"
+                    >
+                      <CheckCircle2
+                        size={16}
+                        className="shrink-0 text-[var(--vibrant)]"
+                      />
+                      {feature}
+                    </div>
+                  ))}
                 </div>
 
                 {/* CTA */}
                 <a
-                  href={`https://wa.me/${siteData.whatsapp}?text=${encodeURIComponent(
+                  href={`https://wa.me/${
+                    siteData.whatsapp
+                  }?text=${encodeURIComponent(
                     `Hello, I would like to book the ${vehicle.name} for my Goa trip. Please share the availability and details.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white transition hover:bg-[var(--primary-dark)]"
+                  className="group/button mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white shadow-[0_7px_18px_rgba(8,116,95,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--primary-dark)] hover:shadow-[0_10px_25px_rgba(8,116,95,0.23)]"
                 >
                   Book This Vehicle
-                  <ArrowRight size={16} />
+                  <ArrowRight
+                    size={16}
+                    className="transition-transform duration-200 group-hover/button:translate-x-1"
+                  />
                 </a>
               </div>
             </article>
@@ -135,10 +140,11 @@ export default function Fleet() {
         </div>
 
         {/* Note */}
-        <p className="mt-8 text-center text-xs text-[var(--muted)]">
+        <div className="mx-auto mt-8 flex max-w-2xl items-center justify-center gap-2 text-center text-xs text-[var(--muted)]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
           Vehicle availability may vary depending on travel date, group size
           and booking requirements.
-        </p>
+        </div>
       </div>
     </section>
   );

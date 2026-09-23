@@ -6,7 +6,6 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -14,12 +13,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "GoaRide Taxi | Goa Taxi Service & Airport Transfers",
-    template: "%s | GoaRide Taxi",
+    default: "Navya Tours & travels | Goa Taxi Service & Airport Transfers",
+    template: "%s | Navya Tours & travels",
   },
 
   description:
-    "Book reliable taxi service in Goa for airport transfers, sightseeing, hotel transfers, local travel and customised Goa trips.",
+    "Book reliable taxi service in Goa for airport transfers, Goa Tours, hotel transfers, local travel and customised Goa trips.",
 
   keywords: [
     "Goa taxi",
@@ -27,12 +26,12 @@ export const metadata: Metadata = {
     "Goa airport taxi",
     "Mopa airport taxi",
     "Dabolim airport taxi",
-    "Goa sightseeing taxi",
+    "Goa Tours taxi",
     "North Goa taxi",
     "South Goa taxi",
   ],
 
-authors: [{ name: "GoaRide Taxi" }],
+authors: [{ name: "Navya Tours & travels" }],
 
 alternates: {
   canonical: "https://cabsgoa.net",
@@ -44,19 +43,19 @@ robots: {
 },
 
   openGraph: {
-    title: "GoaRide Taxi | Reliable Taxi Service in Goa",
+    title: "Navya Tours & travels | Reliable Taxi Service in Goa",
     description:
-      "Airport transfers, sightseeing, hotel transfers and local taxi service across Goa.",
+      "Airport transfers, Goa Tours, hotel transfers and local taxi service across Goa.",
     type: "website",
     locale: "en_IN",
-    siteName: "GoaRide Taxi",
+    siteName: "Navya Tours & travels",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "GoaRide Taxi | Goa Taxi Service",
+    title: "Navya Tours & travels | Goa Taxi Service",
     description:
-      "Book airport transfers, sightseeing and local taxi service in Goa.",
+      "Book airport transfers, Goa Tours and local taxi service in Goa.",
   },
 };
 
@@ -66,10 +65,10 @@ function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
-    name: "GoaRide Taxi",
+    name: "Navya Tours & travels",
     url: "https://cabsgoa.net",
     description:
-      "Taxi service in Goa offering airport transfers, sightseeing, hotel transfers and local travel.",
+      "Taxi service in Goa offering airport transfers, Goa Tours, hotel transfers and local travel.",
     areaServed: {
       "@type": "Place",
       name: "Goa, India",
@@ -77,7 +76,7 @@ function LocalBusinessSchema() {
     serviceType: [
       "Goa Taxi Service",
       "Airport Transfers",
-      "Goa Sightseeing",
+      "Goa Tours",
       "Hotel Transfers",
       "Local Taxi Service",
     ],

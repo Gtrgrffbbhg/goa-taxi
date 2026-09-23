@@ -1,10 +1,10 @@
 export const siteData = {
-  businessName: "GoaRide Taxi",
+  businessName: "Navya Tours & travels",
   tagline: "Your Reliable Taxi Service in Goa",
 
-  phone: "+91 8208063028",
-  whatsapp: "8208063028",
-  email: "kp684728@gmail.com",
+  phone: "+91 99703 23453",
+  whatsapp: "919970323453",
+  email: "premanandhiremath8@gmail.com",
 
   location: "Goa, India",
 
@@ -16,7 +16,7 @@ export const siteData = {
       icon: "Plane",
     },
     {
-      title: "Goa Sightseeing",
+      title: "Goa Tours",
       description:
         "Explore North Goa, South Goa and popular attractions with a comfortable private taxi.",
       icon: "Map",
@@ -73,13 +73,13 @@ fleet: [
 
   packages: [
     {
-      title: "North Goa Sightseeing",
+      title: "North Goa Tours",
       duration: "Full Day",
       description:
         "Discover the beaches, forts and popular attractions of North Goa.",
     },
     {
-      title: "South Goa Sightseeing",
+      title: "South Goa Tours",
       duration: "Full Day",
       description:
         "Explore the peaceful beaches, churches and attractions of South Goa.",
@@ -94,7 +94,7 @@ fleet: [
       title: "Custom Goa Tour",
       duration: "Flexible",
       description:
-        "Create your own Goa sightseeing plan based on your interests.",
+        "Create your own Goa Tours plan based on your interests.",
     },
   ],
 };
